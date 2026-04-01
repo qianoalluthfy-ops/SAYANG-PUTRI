@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Kamu ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff4e50, #ff9a9e);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }.card {
+  background: rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 2s ease;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.heart {
+  font-size: 3em;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #ff4e50;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffe3e3;
+}
+
+  </style>
+</head>
+<body>  <div class="card">
+    <h1>Untuk Kamu, <span id="nama">[Putri Awaliya]</span> ❤️</h1>
+    <p>Adek bungas...</p>
+    <p><b>A 🥺</abang sayang adek></p>
+    <div class="heart">❤️</div>
+    <button onclick="gantiPesan()">Klik aku 💌</button>
+    <p id="pesan"></p>
+  </div>  <script>
+    function gantiPesan() {
+      const pesan = [
+        "Adek t spesial akan Abang 💖",
+        "Ela lihi abang ya😭",
+        "Abang selalu mmikirkan adek😳",
+        "Kalau adek sedih, Abang juga ikut sedih 🥺",
+        "Love you more than anything Maaf ya sayang ❤️"
+      ];
+
+      const random = pesan[Math.floor(Math.random() * pesan.length)];
+      document.getElementById("pesan").innerText = random;
+    }
+  </script></body>
+</html>
